@@ -1,0 +1,43 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<criteriaValues mcdaConcept="Importance" name="significance">
+		<criterionValue>
+			<criterionID>Growth</criterionID>
+			<value>
+				<real>0.25</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Size</criterionID>
+			<value>
+				<real>0.10</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Time</criterionID>
+			<value>
+				<real>0.20</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Unsafeness</criterionID>
+			<value>
+				<real>0.15</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Color</criterionID>
+			<value>
+				<real>0.25</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Impressive</criterionID>
+			<value>
+				<real>0.05</real>
+			</value>
+		</criterionValue>
+	</criteriaValues>
+</xmcda:XMCDA>
+  

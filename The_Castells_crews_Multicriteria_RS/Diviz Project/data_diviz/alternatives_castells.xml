@@ -1,0 +1,14 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<alternatives mcdaConcept="Castells crews from Barcelona city">
+		<alternative id="CB" name="Castellers de Barcelona" />
+		<alternative id="CS" name="Castellers de Sants" />
+		<alternative id="CG" name="Castellers de la Vila de Gracia" />
+		<alternative id="CP" name="Castellers del Poble Sec" />
+		<alternative id="CF" name="Castellers de la Sagrada Familia" />
+		<alternative id="CJ" name="Colla Jove de Barcelona" />
+	</alternatives>
+
+</xmcda:XMCDA>
+  

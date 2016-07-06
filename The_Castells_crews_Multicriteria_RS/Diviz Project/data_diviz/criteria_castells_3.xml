@@ -1,0 +1,122 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<criteria>
+		<criterion id="Growth" name="Growth index (new ht/season)">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>1.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Size" name="Crew size (group)">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>1.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>2.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Time" name="Travelling time (minutes)">
+			<scale>
+				<quantitative>
+					<preferenceDirection>min</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>10.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>20.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Unsafeness" name="Unsafeness index">
+			<scale>
+				<quantitative>
+					<preferenceDirection>min</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>2.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>5.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Color" name="Shirt color">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>2.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Impressive" name="Impressive events participation (events)">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>3.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>5.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+	</criteria>
+
+</xmcda:XMCDA>
+  

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workflow PUBLIC "-//Telecom Bretagne//DTD XML Praxis Workflow 3.0//EN" "http://perso.telecom-bretagne.eu/~bigaret/praxis/dtd/workflow_3.0.dtd">
+
+<workflow>
+    <id>ACED0005757200135B4C6A6176612E6C616E672E4F626A6563743B90CE589F1073296C020000787000000002737200116A6176612E726D692E6467632E564D4944F8865BAFA4A56DB60200025B0004616464727400025B424C00037569647400154C6A6176612F726D692F7365727665722F5549443B7870757200025B42ACF317F8060854E0020000787000000008E64E499B95CF866E737200136A6176612E726D692E7365727665722E5549440F12700DBF364F12020003530005636F756E744A000474696D65490006756E69717565787084460000015520C67B26826907FC7400164D434453535F50524F4A4543545F43415354454C4C53</id>
+    <name>MCDSS_PROJECT_CASTELLS</name>
+    <user>60da4d5b656e5a2a_2a50437a_1531d03c188_-8000</user>
+    <inputs>
+        <input type="file" x="25" y="375" name="" id="0">
+            <infile>alternatives_castells.xml</infile>
+        </input>
+        <input type="file" x="50" y="150" name="" id="1">
+            <infile>criteria_castells_3.xml</infile>
+        </input>
+        <input type="file" x="25" y="250" name="" id="2">
+            <infile>performances_castells.xml</infile>
+        </input>
+        <input type="file" x="25" y="200" name="" id="3">
+            <infile>weights_castells.xml</infile>
+        </input>
+    </inputs>
+    <programs>
+        <program idref="J-MCDA___ElectreConcordance___0.5.1" x="225" y="100" info="J-MCDA ElectreConcordance 0.5.1" id="ElectreConcordance-1">
+            <parameter idref="input0-dep">
+                <info name="Use alternatives as input?" value="1" />
+                <data>1</data>
+            </parameter>
+            <parameter idref="input0">
+                <data input_id="0" />
+            </parameter>
+            <parameter idref="input1">
+                <data input_id="1" />
+            </parameter>
+            <parameter idref="input2">
+                <data input_id="3" />
+            </parameter>
+            <parameter idref="input3">
+                <data input_id="2" />
+            </parameter>
+            <parameter idref="output0">
+                <data>ElectreConcordance-1.output0</data>
+            </parameter>
+            <parameter idref="output1">
+                <data>ElectreConcordance-1.output1</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="J-MCDA___ElectreDiscordances___0.5.1" x="225" y="350" info="J-MCDA ElectreDiscordances 0.5.1" id="ElectreDiscordances-1">
+            <parameter idref="input0-dep">
+                <info name="Use alternatives as input?" value="1" />
+                <data>1</data>
+            </parameter>
+            <parameter idref="input0">
+                <data input_id="0" />
+            </parameter>
+            <parameter idref="input1">
+                <data input_id="1" />
+            </parameter>
+            <parameter idref="input2">
+                <data input_id="2" />
+            </parameter>
+            <parameter idref="output0">
+                <data>ElectreDiscordances-1.output0</data>
+            </parameter>
+            <parameter idref="output1">
+                <data>ElectreDiscordances-1.output1</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="PUT___ElectreCredibility___0.2.0" x="475" y="200" info="PUT ElectreCredibility 0.2.0" id="ElectreCredibility-1">
+            <parameter idref="input1">
+                <data input_id="0" />
+            </parameter>
+            <parameter idref="input2">
+                <data />
+            </parameter>
+            <parameter idref="input2-dep">
+                <info name="Use classes_profiles as input?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="input3">
+                <data>ElectreConcordance-1.output0</data>
+            </parameter>
+            <parameter idref="input4">
+                <data>ElectreDiscordances-1.output0</data>
+            </parameter>
+            <parameter idref="input5">
+                <data />
+            </parameter>
+            <parameter idref="input5-use-file-dep">
+                <info name="Supply method_parameters as a file?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="input5-gui-value-placeholder-1">
+                <info name="comparison_with" value="alternatives vs alternatives" />
+                <data>item0</data>
+            </parameter>
+            <parameter idref="input5-gui-value-placeholder-2">
+                <info name="with_denominator" value="1" />
+                <data>1</data>
+            </parameter>
+            <parameter idref="input5-gui-value-placeholder-3">
+                <info name="only_max_discordance" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="input5-gui-value-placeholder-4">
+                <info name="use_partials" value="1" />
+                <data>1</data>
+            </parameter>
+            <parameter idref="output1">
+                <data>ElectreCredibility-1.output1</data>
+            </parameter>
+            <parameter idref="output2">
+                <data>ElectreCredibility-1.output2</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="PUT___ElectreDistillation___0.2.0" x="700" y="125" info="PUT ElectreDistillation 0.2.0" id="ElectreDistillation-1">
+            <parameter idref="input1">
+                <data input_id="0" />
+            </parameter>
+            <parameter idref="input2">
+                <data>ElectreCredibility-1.output1</data>
+            </parameter>
+            <parameter idref="input3">
+                <data />
+            </parameter>
+            <parameter idref="input3-use-file-dep">
+                <info name="Supply method_parameters as a file?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="input3-gui-value-placeholder-1">
+                <info name="direction" value="Downwards distillation" />
+                <data>item0</data>
+            </parameter>
+            <parameter idref="input3-gui-value-placeholder-2">
+                <info name="alpha" value="-0.05" />
+                <data>-0.05</data>
+            </parameter>
+            <parameter idref="input3-gui-value-placeholder-3">
+                <info name="beta" value="0.1" />
+                <data>0.1</data>
+            </parameter>
+            <parameter idref="output1">
+                <data>ElectreDistillation-1.output1</data>
+            </parameter>
+            <parameter idref="output2">
+                <data>ElectreDistillation-1.output2</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="PUT___ElectreDistillationRank___0.1.0" x="925" y="150" info="PUT ElectreDistillationRank 0.1.0" id="ElectreDistillationRank-1">
+            <parameter idref="input1">
+                <data input_id="0" />
+            </parameter>
+            <parameter idref="input2">
+                <data>ElectreDistillation-1.output1</data>
+            </parameter>
+            <parameter idref="input3">
+                <data>ElectreDistillation-2.output1</data>
+            </parameter>
+            <parameter idref="output1">
+                <data>ElectreDistillationRank-1.output1</data>
+            </parameter>
+            <parameter idref="output2">
+                <data>ElectreDistillationRank-1.output2</data>
+            </parameter>
+            <parameter idref="output3">
+                <data>ElectreDistillationRank-1.output3</data>
+            </parameter>
+            <parameter idref="output4">
+                <data>ElectreDistillationRank-1.output4</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="ITTB___plotAlternativesValuesPreorder___1.1" x="1175" y="250" info="ITTB plotAlternativesValuesPreorder 1.1" id="plotAlternativesValuesPreorder-1">
+            <parameter idref="options">
+                <data />
+            </parameter>
+            <parameter idref="options-use-file-dep">
+                <info name="Supply options as a file?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="options-gui-value-placeholder-1">
+                <info name="Chart title:" value="" />
+                <data />
+            </parameter>
+            <parameter idref="options-gui-value-placeholder-2">
+                <info name="Order:" value="Ascending" />
+                <data>increasing</data>
+            </parameter>
+            <parameter idref="options-gui-value-placeholder-3">
+                <info name="Shape of the nodes?" value="Rectangle" />
+                <data>rectangle</data>
+            </parameter>
+            <parameter idref="options-gui-value-placeholder-4">
+                <info name="Alternative name or id?" value="Diaplay name" />
+                <data>true</data>
+            </parameter>
+            <parameter idref="options-gui-value-placeholder-5">
+                <info name="Use colors?" value="No" />
+                <data>false</data>
+            </parameter>
+            <parameter idref="options-gui-value-placeholder-6">
+                <data>Black</data>
+            </parameter>
+            <parameter idref="alternatives">
+                <data input_id="0" />
+            </parameter>
+            <parameter idref="alternativesValues">
+                <data>ElectreDistillationRank-1.output2</data>
+            </parameter>
+            <parameter idref="alternativesValuesPlot">
+                <data>plotAlternativesValuesPreorder-1.alternativesValuesPlot</data>
+            </parameter>
+            <parameter idref="messages">
+                <data>plotAlternativesValuesPreorder-1.messages</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="PUT___ElectreDistillation___0.2.0" x="700" y="275" info="PUT ElectreDistillation 0.2.0" id="ElectreDistillation-2">
+            <parameter idref="input1">
+                <data input_id="0" />
+            </parameter>
+            <parameter idref="input2">
+                <data>ElectreCredibility-1.output1</data>
+            </parameter>
+            <parameter idref="input3">
+                <data />
+            </parameter>
+            <parameter idref="input3-use-file-dep">
+                <info name="Supply method_parameters as a file?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="input3-gui-value-placeholder-1">
+                <info name="direction" value="Upwards distillation" />
+                <data>item1</data>
+            </parameter>
+            <parameter idref="input3-gui-value-placeholder-2">
+                <info name="alpha" value="-0.05" />
+                <data>-0.05</data>
+            </parameter>
+            <parameter idref="input3-gui-value-placeholder-3">
+                <info name="beta" value="0.1" />
+                <data>0.1</data>
+            </parameter>
+            <parameter idref="output1">
+                <data>ElectreDistillation-2.output1</data>
+            </parameter>
+            <parameter idref="output2">
+                <data>ElectreDistillation-2.output2</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="ITTB___plotAlternativesComparisons___1.1" x="600" y="475" info="ITTB plotAlternativesComparisons 1.1" id="plotAlternativesComparisons-1">
+            <parameter idref="methodGraphOptions">
+                <data />
+            </parameter>
+            <parameter idref="methodGraphOptions-use-file-dep">
+                <info name="Supply methodGraphOptions as a file?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="methodGraphOptions-gui-value-placeholder-1">
+                <info name="Graph type:" value="Arcs and values" />
+                <data>true</data>
+            </parameter>
+            <parameter idref="methodGraphOptions-gui-value-placeholder-2">
+                <data>false</data>
+            </parameter>
+            <parameter idref="methodGraphOptions-gui-value-placeholder-3">
+                <info name="Shape of the nodes?" value="Rectangle" />
+                <data>rectangle</data>
+            </parameter>
+            <parameter idref="methodGraphOptions-gui-value-placeholder-4">
+                <info name=" Use colors?" value="Yes" />
+                <data>true</data>
+            </parameter>
+            <parameter idref="methodGraphOptions-gui-value-placeholder-5">
+                <info name="Choose color:" value="Black" />
+                <data>Black</data>
+            </parameter>
+            <parameter idref="alternatives">
+                <data input_id="0" />
+            </parameter>
+            <parameter idref="alternativesComparisons">
+                <data>ElectreCredibility-1.output1</data>
+            </parameter>
+            <parameter idref="messages">
+                <data>plotAlternativesComparisons-1.messages</data>
+            </parameter>
+            <parameter idref="alternativesComparisonsPlot">
+                <data>plotAlternativesComparisons-1.alternativesComparisonsPlot</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="ITTB___plotAlternativesComparisons___1.1" x="1000" y="475" info="ITTB plotAlternativesComparisons 1.1" id="plotAlternativesComparisons-2">
+            <parameter idref="methodGraphOptions">
+                <data />
+            </parameter>
+            <parameter idref="methodGraphOptions-use-file-dep">
+                <info name="Supply methodGraphOptions as a file?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="methodGraphOptions-gui-value-placeholder-1">
+                <info name="Graph type:" value="Arcs and values" />
+                <data>true</data>
+            </parameter>
+            <parameter idref="methodGraphOptions-gui-value-placeholder-2">
+                <data>false</data>
+            </parameter>
+            <parameter idref="methodGraphOptions-gui-value-placeholder-3">
+                <info name="Shape of the nodes?" value="Rectangle" />
+                <data>rectangle</data>
+            </parameter>
+            <parameter idref="methodGraphOptions-gui-value-placeholder-4">
+                <info name=" Use colors?" value="Yes" />
+                <data>true</data>
+            </parameter>
+            <parameter idref="methodGraphOptions-gui-value-placeholder-5">
+                <info name="Choose color:" value="Black" />
+                <data>Black</data>
+            </parameter>
+            <parameter idref="alternatives">
+                <data input_id="0" />
+            </parameter>
+            <parameter idref="alternativesComparisons">
+                <data>ElectreDistillationRank-1.output1</data>
+            </parameter>
+            <parameter idref="messages">
+                <data>plotAlternativesComparisons-2.messages</data>
+            </parameter>
+            <parameter idref="alternativesComparisonsPlot">
+                <data>plotAlternativesComparisons-2.alternativesComparisonsPlot</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+    </programs>
+</workflow>
+
